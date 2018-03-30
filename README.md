@@ -12,7 +12,7 @@ Client: (AngularJS)
 
 - bootstrap(Style)
 - ngRoute(Routing)
-- ui-angular(Datepicker Calendar)
+- ui.bootstrap(Datepicker Calendar)
 - ngFileUpload(Upload and download files (images) to and from the server)
 - toastr(Notifications)
 
