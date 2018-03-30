@@ -22,4 +22,16 @@ To have the database in Sql Server:
 - Select WebAPI in Default project dropdownlist.
 - Type update-database.
 
+Screenshots:
+- Create
+<img src="Screenshots/create.png" width="700" >
+
+- Read
+<img src="Screenshots/List.png" width="700" >
+
+- Update
+<img src="Screenshots/update.png" width="700" >
+
+- Delete
+<img src="Screenshots/delete.png" width="700" >
 
