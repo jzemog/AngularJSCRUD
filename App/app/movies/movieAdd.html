@@ -1,0 +1,79 @@
+﻿<div>
+    <h3>Create</h3>
+    <hr />
+    <div class="panel panel-primary">
+        <div class="panel-heading">     
+            <h4 class="panel-title">New Movie</h4>
+        </div>
+        <div class="panel-body">
+            <div class="row">
+                <div class="col-md-4">
+                    <div class="form-group">
+                        <div class="row">
+                            <div class="col-md-12">
+                                <img ng-src="../../content/images/unknown.jpg" class="avatar img-responsive" alt="avatar">
+                            </div>
+                        </div>
+                    </div>
+                    <div class="form-group">
+                        <div class="row">
+                            <div class="col-md-12 text-center">
+                                <input type="file" ngf-select="uploadFiles($file)" />
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-8">
+                    <div class="form-group">
+                        <div class="row">
+                            <div class="col-md-6">
+                                <label class="control-label">Title</label>
+                                <input class="form-control" type="text" ng-model="movie.Title" />
+                            </div>
+                            <div class="col-md-6">
+                                <label class="control-label">Genre</label>
+                                <select ng-model="movie.GenreId" class="form-control black" ng-options="option.ID as option.Name for option in genres" required></select>
+                                <input type="hidden" name="GenreId" ng-value="movie.GenreId" />
+                            </div>
+                        </div>
+                    </div>
+                    <div class="form-group">
+                        <div class="row">
+                            <div class="col-md-6">
+                                <label class="control-label">Director</label>
+                                <input class="form-control" type="text" ng-model="movie.Director" />
+                            </div>
+                            <div class="col-md-6">
+                                <label class="control-label">Release Date</label>
+                                <p class="input-group">
+                                    <input type="text" class="form-control" name="dateReleased" uib-datepicker-popup="{{format}}" ng-model="movie.ReleaseDate" is-open="datepicker.opened" datepicker-options="dateOptions" ng-required="true" datepicker-append-to-body="true" close-text="Close" />
+                                    <span class="input-group-btn">
+                                        <button type="button" class="btn btn-default" ng-click="openDatePicker($event)"><i class="glyphicon glyphicon-calendar"></i></button>
+                                    </span>
+                                </p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="form-group">
+                        <div class="row">
+                            <div class="col-md-12">
+                                <label class="control-label">Description</label>
+                                <textarea class="form-control" ng-model="movie.Description" name="description" rows="3" />
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="panel-footer">
+            <div class="form-group">
+                <div class="col-md-12">
+                    <div class="pull-right">
+                        <button type="submit" class="btn btn-primary" ng-click="add()">Create</button>
+                        <a class="btn btn-default" ng-href="movies/">Cancel</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>

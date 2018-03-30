@@ -1,0 +1,31 @@
+﻿<div>
+    <h3>Movies</h3>
+    <hr />
+    <div class="panel">
+        <table class="table table-hover table-responsive">
+            <thead style="background-color:chocolate; color:white">
+                <tr>
+                    <td class="col-md-1"><a href="/movies/add" style="color:white"><i class="fa fa-plus-square"></i></a>&nbsp;New</td>
+                    <td class="col-md-2">Title</td>
+                    <td class="col-md-1">Genre</td>
+                    <td class="col-md-2">Director</td>
+                    <td class="col-md-2">Release</td>
+                    <td class="col-md-4">Description</td>
+                </tr>
+            </thead>
+            <tbody>
+                <tr ng-repeat="movie in movies">
+                    <td class="col-md-1">                        
+                        <a href="/movies/{{movie.ID}}"><i class="fa fa-edit"></i></a>&nbsp;&nbsp;
+                        <a href=""><i ng-click="remove(movie)" class="fa fa-trash-o fa-lg"></i></a>&nbsp;&nbsp;
+                    </td>
+                    <td class="col-md-2">{{movie.Title}}</td>
+                    <td class="col-md-1">{{movie.Genre}}</td>
+                    <td class="col-md-2">{{movie.Director}}</td>
+                    <td class="col-md-2">{{movie.ReleaseDate | date:MM/dd/yyyy}}</td>
+                    <td class="col-md-4">{{movie.Description}}</td>
+                </tr>
+            </tbody>
+        </table>
+    </div>
+</div>

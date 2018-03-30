@@ -1,0 +1,22 @@
+﻿.panel-primary {
+    border-color: white;
+}
+
+.panel-primary > .panel-heading {
+    color: #fff;
+    background-color: chocolate;
+    border-color: chocolate;
+}
+
+.panel-primary > .panel-heading + .panel-collapse > .panel-body {
+    border-top-color: white;
+}
+
+.panel-primary > .panel-heading .badge {
+    color: chocolate;
+    background-color: #fff;
+}
+
+.panel-primary > .panel-footer + .panel-collapse > .panel-body {
+    border-bottom-color: white;
+}
